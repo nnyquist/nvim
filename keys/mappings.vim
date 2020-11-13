@@ -18,5 +18,5 @@ nnoremap <C-l> <C-w>l
 nnoremap ; :
 nnoremap : ;
 
-" Nerd tree toggle
+" NerdTree toggle
 nnoremap <leader>n :NERDTreeToggle<CR>

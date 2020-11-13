@@ -37,3 +37,10 @@ set textwidth=120                       " Want to be able to go beyond 80 if I n
 set cc=80                               " Highlight the 80th column to help with proper coding"
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vim
+
+" inc search turn off highlighting after search complete
+augroup vimrc-incsearch-highlight
+  autocmd!
+  autocmd CmdlineEnter /,\? :set hlsearch
+  autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END

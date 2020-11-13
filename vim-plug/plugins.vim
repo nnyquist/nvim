@@ -14,8 +14,6 @@ call plug#begin('$LOCALAPPDATA/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
     " One Dark Theme
     Plug 'joshdick/onedark.vim'
-    " Auto pairs
-    Plug 'jiangmiao/auto-pairs'
     " easy commenting
     Plug 'tpope/vim-commentary'
 
