@@ -1,6 +1,6 @@
 local M = {}
 
-M.on_attach = function(bufnr)
+M.on_attach = function(client, bufnr)
 	-- keybind options
 	local opts = function(s)
 		return { noremap = true, silent = true, buffer = bufnr, desc = s }
