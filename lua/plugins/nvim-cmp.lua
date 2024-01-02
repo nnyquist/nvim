@@ -41,7 +41,6 @@ end
 
 return {
 	"hrsh7th/nvim-cmp",
-	lazy = false,
 	config = config,
 	dependencies = {
 		"onsails/lspkind.nvim",
