@@ -4,6 +4,7 @@ local config = function()
 	require("neoconf").setup({})
 
 	local lspconfig = require("lspconfig")
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 	local signs = { Error = " ", Warn = " ", Hint = "", Info = "" }
 
@@ -14,7 +15,7 @@ local config = function()
 
 	-- lua
 	lspconfig.lua_ls.setup({
-		-- capabilities = capabilities,
+		capabilities = capabilities,
 		on_attach = on_attach,
 		settings = { -- custom settings for lua
 			Lua = {
@@ -35,6 +36,7 @@ local config = function()
 
 	-- golang
 	lspconfig.gopls.setup({
+		capabilities = capabilities,
 		on_attach = on_attach,
 		settings = {
 			gopls = {
@@ -53,5 +55,8 @@ return {
 	dependencies = {
 		"windwp/nvim-autopairs",
 		"williamboman/mason.nvim",
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-nvim-lsp",
 	},
 }
