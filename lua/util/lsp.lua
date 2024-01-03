@@ -13,8 +13,7 @@ M.on_attach = function(client, bufnr)
 
 	-- default keybindings for LSP
 	nkey("<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", "[C]ode [A]ction") -- TODO: replace with trouble.nvim
-	nkey("<leader>cr", "<cmd>lua vim.lsp.buf.rename()<CR>", "[C]ode [R]ename Symbol") -- TODO: replace with trouble.nvim
-	nkey("<leader>cd", require("telescope.builtin").diagnostics, "[C]ode [D]iagnostics") -- TODO: replace with trouble.nvim
+	nkey("gr", "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename Symbol")
 	nkey("gd", require("telescope.builtin").lsp_definitions, "Jump to definition")
 	nkey("K", "<cmd>lua vim.lsp.buf.hover()<CR>", "Displays hover info in floating window")
 end
