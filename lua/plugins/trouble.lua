@@ -8,9 +8,6 @@ end
 return {
 	"folke/trouble.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	opts = {
-		signs = {},
-	},
 	keys = {
 		vim.keymap.set("n", prefix .. "x", function()
 			require("trouble").toggle()
