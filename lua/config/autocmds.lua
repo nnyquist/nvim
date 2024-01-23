@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			return
 		end
 
-		vim.lsp.buf.format({ name = "null-ls", async = true })
+		vim.lsp.buf.format({ name = "null-ls", async = false })
 	end,
 })
 
